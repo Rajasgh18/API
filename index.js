@@ -1,7 +1,6 @@
 const express = require('express');
 const App = express();
 const port = 5000;
-const dotenv = require('dotenv');
 const connectToDB = require('./db');
 const product = require('./routes/product');
 const category = require('./routes/category');
@@ -12,7 +11,6 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
-dotenv.config();
 connectToDB();
 App.use(cors(
     {
